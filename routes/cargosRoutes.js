@@ -1,12 +1,13 @@
 const { Router } = require('express')
 
 const router = Router()
+const CargosController = require('../controllers/CargosController')
 
 router
-    .post('/cargos')
-    .get('/cargos')
-    .get('/cargos/:id')
-    .delete('/cargos/:id')
-    .put('/cargos/:id')
+    .post('/cargos', CargosController.create)
+    .get('/cargo')
+    .get('/cargo/:id')
+    .delete('/cargo/:id')
+    .put('/cargo/:id')
 
 module.exports = router

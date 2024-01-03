@@ -5,6 +5,7 @@ const horarios = require('./horariosRoutes');
 const disciplinas = require('./disciplinasRoutes');
 const auth = require('./authRoutes');
 const cargo = require('./cargosRoutes');
+const permissao = require('./permissoesRoutes');
 module.exports = app => {
     app.use(bodyparser.json());
     app.use(auth);
@@ -13,5 +14,6 @@ module.exports = app => {
     app.use(disciplinas);
     app.use(usuarios);
     app.use(cargo);
+    app.use(permissao);
 
 }
